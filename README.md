@@ -7,7 +7,7 @@
 ## 💉 Injection Guide
 
 1. **Download the tools:**
-   - [YuB-X MMP Injector](https://github.com/YuB-W/RBX-MMP-Injector/tree/main)
+   - [YuB-X MMP Injector](https://github.com/YuB-W/YuBX-RBX-MMP_V2)
    - [YuB-X Dumper](https://github.com/YuB-W/YuB-X_RBX_Dumper)
 
 2. **Run Roblox** and inject `yubx.dll` using the YuB-X MMP Injector.
