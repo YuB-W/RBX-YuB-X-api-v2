@@ -84,7 +84,7 @@ namespace Yubx {
 
         luaL_checktype(LS, 1, LUA_TSTRING);
         auto Source = lua_tostring(LS, 1);
-        auto ChunkName = luaL_optstring(LS, 2, "YubxInternal");
+        auto ChunkName = luaL_optstring(LS, 2, "Vexure");
 
         auto Bytecode = Execution->CompileScript(Source);
 
@@ -108,7 +108,7 @@ namespace Yubx {
         int identifyexecutor(lua_State* LS) {
             //("identifyexecutor");
 
-            lua_pushstring(LS, "YubxInternal");
+            lua_pushstring(LS, "Vexure");
             lua_pushstring(LS, "1.0");
             return 2;
         };
@@ -373,7 +373,7 @@ namespace Yubx {
         int getexecutorname(lua_State* LS) {
             //("getexecutorname");
 
-            lua_pushstring(LS, "YubxInternal");
+            lua_pushstring(LS, "Vexure");
             return 1;
         };
 
@@ -1739,7 +1739,7 @@ namespace Yubx {
 
     namespace Filesystem {
         static std::filesystem::path a = getenv("LOCALAPPDATA");
-        static std::filesystem::path b = a / "YubxInternal";
+        static std::filesystem::path b = a / "Vexure";
         static std::filesystem::path c = b / "workspace";
 
         std::string getWorkspaceFolder() {
@@ -2001,15 +2001,15 @@ namespace Yubx {
             if (!std::filesystem::is_regular_file(FullPath))
                 luaL_error(L, ("Failed to find local asset!"));
 
-            std::filesystem::path customAssetsDir = std::filesystem::current_path() / "ExtraContent" / "YubxInternal";
-            std::filesystem::path customAssetsFile = std::filesystem::current_path() / "ExtraContent" / "YubxInternal" / FullPath.filename();
+            std::filesystem::path customAssetsDir = std::filesystem::current_path() / "ExtraContent" / "Vexure";
+            std::filesystem::path customAssetsFile = std::filesystem::current_path() / "ExtraContent" / "Vexure" / FullPath.filename();
 
             if (!std::filesystem::exists(customAssetsDir))
                 std::filesystem::create_directory(customAssetsDir);
 
             std::filesystem::copy_file(FullPath, customAssetsFile, std::filesystem::copy_options::update_existing);
 
-            std::string Final = "rbxasset://YubxInternal/" + customAssetsFile.filename().string();
+            std::string Final = "rbxasset://Vexure/" + customAssetsFile.filename().string();
             lua_pushlstring(L, Final.c_str(), Final.size());
             return 1;
         }
