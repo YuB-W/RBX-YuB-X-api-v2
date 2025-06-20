@@ -113,7 +113,7 @@ void Start()
     luaL_sandboxthread(LuaState);
 
     Execution->Execute("print('YubxInternal Loaded!')");
-    std::thread(gui::overlay::render).detach();
+    //std::thread(gui::overlay::render).detach();
 	while (true) { Sleep(10000); };
 }
 
