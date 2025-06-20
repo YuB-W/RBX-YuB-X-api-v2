@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{49683d61-1bcf-4cfe-9e1d-0a0ca5588279}</ProjectGuid>
+    <RootNamespace>ArcticInternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>YubxInternal</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>Build</IntDir>
+    <TargetName>RobloxPlayerBeta</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ARCTICINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ARCTICINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ARCTICINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ARCTICINTERNAL_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\cryptopp\include\;$(ProjectDir)Dependencies\curl\include\;$(ProjectDir)Dependencies\cpr\include;$(ProjectDir)Dependencies\Zstd\include;$(ProjectDir)Miscellaneous\Environment;$(ProjectDir)Miscellaneous\Communication;$(ProjectDir)Miscellaneous\TaskScheduler;$(ProjectDir)Miscellaneous\Execution;$(ProjectDir)Dependencies\Luau\Compiler\include;$(ProjectDir)Miscellaneous\;$(ProjectDir)Miscellaneous\NeedUpdating;$(ProjectDir)Dependencies\;$(ProjectDir)Dependencies\Luau\Common\include;$(ProjectDir)Dependencies\Luau\Ast\include;$(ProjectDir)Dependencies\Luau\VM\include;$(ProjectDir)Dependencies\Luau\VM\src;$(ProjectDir)Dependencies\Luau</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\cryptopp\lib\;$(ProjectDir)Dependencies\cpr\lib\;$(ProjectDir)Dependencies\curl\lib\;$(ProjectDir)Dependencies\Zstd\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Wldap32.lib;Normaliz.lib;Crypt32.lib;zstd_static.lib;cpr.lib;libcurl_release.lib;cryptopp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Dependencies\cpr\src\auth.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\cookies.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\cprtypes.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\digest.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\error.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\multipart.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\parameters.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\payload.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\proxies.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\session.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\ssl_options.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\timeout.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\util.cpp" />
+    <ClCompile Include="Dependencies\crypt\base64.cpp" />
+    <ClCompile Include="Dependencies\easywsclient\easywsclient.cpp" />
+    <ClCompile Include="Dependencies\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Dependencies\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Allocator.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Ast.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Confusables.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Cst.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Lexer.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Location.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\Parser.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\StringUtils.cpp" />
+    <ClCompile Include="Dependencies\Luau\Ast\src\TimeTrace.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\BuiltinFolding.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\Builtins.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\BytecodeBuilder.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\Compiler.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\ConstantFolding.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\CostModel.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\lcode.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\TableShape.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\Types.cpp" />
+    <ClCompile Include="Dependencies\Luau\Compiler\src\ValueTracking.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lapi.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\laux.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lbaselib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lbitlib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lbuffer.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lbuflib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lbuiltins.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lcorolib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ldblib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ldebug.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ldo.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lfunc.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lgc.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lgcdebug.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\linit.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lmathlib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lmem.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lnumprint.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lobject.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\loslib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lperf.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lstate.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lstring.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lstrlib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ltable.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ltablib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ltm.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\ludata.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lutf8lib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lveclib.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lvmexecute.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lvmload.cpp" />
+    <ClCompile Include="Dependencies\Luau\VM\src\lvmutils.cpp" />
+    <ClCompile Include="Dependencies\lz4\lz4.c" />
+    <ClCompile Include="Dependencies\lz4\lz4file.c" />
+    <ClCompile Include="Dependencies\lz4\lz4frame.c" />
+    <ClCompile Include="Dependencies\lz4\lz4hc.c" />
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Miscellaneous\Environment\Environment.cpp" />
+    <ClCompile Include="Miscellaneous\Execution\Execution.cpp" />
+    <ClCompile Include="Miscellaneous\overlay\overlay.cpp" />
+    <ClCompile Include="Miscellaneous\TaskScheduler\Scheduler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\cpr\include\cpr\api.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\auth.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\body.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\cookies.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\cpr.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\cprtypes.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\curlholder.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\defines.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\digest.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\error.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\HttpStatus.hpp" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\low_speed.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\max_redirects.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\multipart.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\parameters.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\payload.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\proxies.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\response.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\session.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\ssl_options.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\timeout.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\util.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\3way.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\adler32.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\adv_simd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\aes.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\aes_armv4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\algebra.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\algparam.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\allocate.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\arc4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\argnames.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\aria.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\arm_simd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\asn.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\authenc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\base32.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\base64.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\basecode.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\blake2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\blowfish.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\blumshub.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\camellia.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cast.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cbcmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ccm.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\chacha.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\chachapoly.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cham.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\channels.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_align.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_asm.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_cpu.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_cxx.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_dll.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_int.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_misc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_ns.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_os.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\config_ver.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cpu.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\crc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\cryptlib.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\darn.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\default.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\des.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\dh.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\dh2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\dll.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\dmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\donna.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\donna_32.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\donna_64.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\donna_sse.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\drbg.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\dsa.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\eax.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ec2n.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\eccrypto.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ecp.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ecpoint.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\elgamal.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\emsa2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\eprecomp.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\esign.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\fhmqv.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\files.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\filters.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\fips140.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\fltrimpl.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gcm.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gf256.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gf2n.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gf2_32.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gfpcrypt.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gost.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\gzip.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hashfwd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hc128.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hc256.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hex.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hight.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hkdf.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hmqv.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\hrtimer.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ida.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\idea.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\integer.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\iterhash.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\kalyna.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\keccak.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\lea.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\lsh.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\lubyrack.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\luc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\mars.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\md2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\md4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\md5.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\mdc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\mersenne.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\misc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\modarith.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\modes.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\modexppc.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\mqueue.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\mqv.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\naclite.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\nbtheory.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\nr.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\oaep.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\oids.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\osrng.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ossig.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\padlkrng.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\panama.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\pch.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\pkcspad.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\poly1305.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\polynomi.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ppc_simd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\pssr.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\pubkey.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\pwdbased.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\queue.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rabbit.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rabin.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\randpool.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rc2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rc5.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rc6.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rdrand.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rijndael.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ripemd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rng.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rsa.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\rw.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\safer.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\salsa.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\scrypt.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\seal.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\secblock.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\secblockfwd.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\seckey.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\seed.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\serpent.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\serpentp.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sha.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sha1_armv4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sha256_armv4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sha3.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sha512_armv4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\shacal2.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\shake.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\shark.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\simeck.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\simon.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\simple.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\siphash.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\skipjack.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sm3.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sm4.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\smartptr.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\sosemanuk.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\speck.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\square.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\stdcpp.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\strciphr.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\tea.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\threefish.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\tiger.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\trap.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\trunhash.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\ttmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\tweetnacl.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\twofish.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\vmac.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\wake.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\whrlpool.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\words.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\xed25519.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\xtr.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\xtrcrypt.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\xts.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\zdeflate.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\zinflate.h" />
+    <ClInclude Include="Dependencies\cryptopp\include\cryptopp\zlib.h" />
+    <ClInclude Include="Dependencies\crypt\base64.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\curl.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\curlver.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\easy.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\header.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\mprintf.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\multi.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\options.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\stdcheaders.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\system.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\typecheck-gcc.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\urlapi.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\websockets.h" />
+    <ClInclude Include="Dependencies\easywsclient\easywsclient.hpp" />
+    <ClInclude Include="Dependencies\HttpStatus\HttpStatus.hpp" />
+    <ClInclude Include="Dependencies\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="Dependencies\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Dependencies\imgui\imconfig.h" />
+    <ClInclude Include="Dependencies\imgui\imgui.h" />
+    <ClInclude Include="Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_truetype.h" />
+    <ClInclude Include="Dependencies\imgui\KeybindWidget.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Allocator.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Ast.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Confusables.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Cst.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Lexer.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Location.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\ParseOptions.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\Parser.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\ParseResult.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\StringUtils.h" />
+    <ClInclude Include="Dependencies\Luau\Ast\include\Luau\TimeTrace.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\Bytecode.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\BytecodeUtils.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\Common.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\DenseHash.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\ExperimentalFlags.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\Variant.h" />
+    <ClInclude Include="Dependencies\Luau\Common\include\Luau\VecDeque.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\include\luacode.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\include\Luau\BytecodeBuilder.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\include\Luau\Compiler.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\BuiltinFolding.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\Builtins.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\ConstantFolding.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\CostModel.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\TableShape.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\Types.h" />
+    <ClInclude Include="Dependencies\Luau\Compiler\src\ValueTracking.h" />
+    <ClInclude Include="Dependencies\Luau\VM\include\lua.h" />
+    <ClInclude Include="Dependencies\Luau\VM\include\luaconf.h" />
+    <ClInclude Include="Dependencies\Luau\VM\include\lualib.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lapi.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lbuffer.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lbuiltins.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lbytecode.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lcommon.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\ldebug.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\ldo.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lfunc.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lgc.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lmem.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lnumutils.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lobject.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lstate.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lstring.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\ltable.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\ltm.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\ludata.h" />
+    <ClInclude Include="Dependencies\Luau\VM\src\lvm.h" />
+    <ClInclude Include="Dependencies\lz4\lz4.h" />
+    <ClInclude Include="Dependencies\lz4\lz4file.h" />
+    <ClInclude Include="Dependencies\lz4\lz4frame.h" />
+    <ClInclude Include="Dependencies\lz4\lz4frame_static.h" />
+    <ClInclude Include="Dependencies\lz4\lz4hc.h" />
+    <ClInclude Include="Dependencies\nlohmann\json.hpp" />
+    <ClInclude Include="Dependencies\nlohmann\json_fwd.hpp" />
+    <ClInclude Include="Dependencies\Zstd\include\zstd\xxhash.h" />
+    <ClInclude Include="Dependencies\Zstd\include\zstd\zstd.h" />
+    <ClInclude Include="Miscellaneous\Environment\Environment.hpp" />
+    <ClInclude Include="Miscellaneous\Execution\Execution.hpp" />
+    <ClInclude Include="Miscellaneous\Includes.hpp" />
+    <ClInclude Include="Miscellaneous\NeedUpdating\LuaVM.hpp" />
+    <ClInclude Include="Miscellaneous\NeedUpdating\Offsets.hpp" />
+    <ClInclude Include="Miscellaneous\overlay\overlay.hpp" />
+    <ClInclude Include="Miscellaneous\TaskScheduler\Scheduler.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\cryptopp\lib\cryptopp.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets" Condition="Exists('..\packages\nlohmann.json.3.12.0\build\native\nlohmann.json.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>
