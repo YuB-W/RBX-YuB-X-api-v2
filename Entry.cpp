@@ -4,11 +4,6 @@
 #include "Environment.hpp"
 #include "overlay/overlay.hpp"
 
-#define _CRT_SECURE_NO_DEPRECATE
-#pragma warning (disable : 4996)
-#pragma comment(linker, "/export:run=bRobloxPlayerBeta.dll.run,@1")
-
-
 #pragma comment(lib, "ws2_32.lib")
 
 #define PORT "5454"
@@ -122,35 +117,11 @@ void Start()
 	while (true) { Sleep(10000); };
 }
 
-
-void LoadDLL()
-{
-    HMODULE hDll = LoadLibrary(L"bRobloxPlayerBeta.dll");
-}
-
-DWORD WINAPI DllProxy(LPVOID lpParameter) {
-    LoadDLL();
-
-    MessageBoxA(NULL, "Hi", "", MB_TOPMOST);
-
-    Start();
-
-    return 0;
-}
-
-
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
-    HANDLE threadHandle;
-    switch (ul_reason_for_call) {
+BOOL APIENTRY DllMain(HMODULE Module, DWORD Reason, LPVOID Reserved) {
+    switch (Reason) {
     case DLL_PROCESS_ATTACH:
-        threadHandle = CreateThread(NULL, 0, DllProxy, NULL, 0, NULL);
-        if (threadHandle) {
-            SuspendThread(threadHandle);
-            ResumeThread(threadHandle);
-            CloseHandle(threadHandle);
-        }
-        break;
-    case DLL_PROCESS_DETACH:
+        DisableThreadLibraryCalls(Module);
+        std::thread(Start).detach();
         break;
     }
     return TRUE;
