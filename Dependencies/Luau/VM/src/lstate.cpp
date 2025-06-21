@@ -22,7 +22,7 @@ typedef struct LG
 
 static void stack_init(lua_State* L1, lua_State* L)
 {
-    if (Offsets::DecryptState != REBASE(0xB44700))
+    if (Offsets::DecryptState != REBASE(0xDC7E20))
         return stack_init(L1, L);
 
     // initialize CallInfo array
